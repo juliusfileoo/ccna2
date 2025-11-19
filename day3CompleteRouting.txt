@@ -122,7 +122,7 @@ int e0/0
 !A1: creating Floating Default route and Secondary Default Route:
 config t
 ip route 0.0.0.0 0.0.0.0 192.168.1.129 1
-ip route 0.0.0.0 0.0.0.0 192.168.1.130 2
+ip route 0.0.0.0 0.0.0.0 192.168.1.130 10
 do sh ip route static
 A2:
 config t
@@ -132,7 +132,7 @@ int e1/0
 !A2: creating primary and backup default route:
 config t
 ip route 0.0.0.0 0.0.0.0 192.168.1.130 1
-ip route 0.0.0.0 0.0.0.0 192.168.1.129  2
+ip route 0.0.0.0 0.0.0.0 192.168.1.129  5
 do sh ip route static
 p1:
 config t
@@ -406,10 +406,11 @@ TASK4: WHY OSPF AND BGP ARE BEST FRIENDS, SOULMATE, LOVERS, FUCKBUDDY, MU, FOREV
                              BFF, :
 OSPF can Inject all BGP routes int ONE ospf route: O*E2
 R1:
-CONFIG t
-router ospf 1
-Default-Information Originate
-end
+conf t
+ router ospf 1
+  default-information originate
+  end
+
 
 r4:ping 8.8.8.8
 p1:ping 8.8.8.8
@@ -464,4 +465,5 @@ Howt to configure Site 2 site VPN JP to PH:
 https://
 
 TASK6: FUndamentals of Cisco network Security:
+
 
