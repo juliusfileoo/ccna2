@@ -136,7 +136,7 @@ Int Gi 1
 end
 YOUR COMPANY IS HAS VERY LOW INTERNET SPEED, BEC OF TORRENTS:
 www.thepiratebay.org   162.159.0.0     104.21.0.0
-www.limetorrents.com    172.67.0.0.   84.32.0.0
+www.limetorrents.com    172.67.0.0  84.32.0.0
 www.freeanimeonline.com   76.223.0.0.  13.248.0.0.
 www.torlock2.com   104.21.0.0
 www.hentaisites.com 104.21.0.0   
@@ -145,14 +145,12 @@ www.iptorrents.com  104.26.0.0.   95.211.0.0
 config t
 NO ip access-list standard NOTORS
 ip access-list standard NOTORS
-DENY   __.__.__.__   0.0.255.255
-DENY   __.__.__.__   0.0.255.255
-DENY   __.__.__.__   0.0.255.255
-DENY   __.__.__.__   0.0.255.255
-DENY   __.__.__.__   0.0.255.255
-DENY   __.__.__.__   0.0.255.255
-DENY   __.__.__.__   0.0.255.255
-DENY   __.__.__.__   0.0.255.255
+DENY   162.159.0.0   0.0.255.255
+DENY   172.67.0.0   0.0.255.255
+DENY   76.223.0.0   0.0.255.255
+DENY   104.21.0.0   0.0.255.255
+DENY   104.21.0.0   0.0.255.255
+DENY   104.26.0.0  0.0.255.255
 Permit Any
 Int Gi 1
  ip access-group NOTORS in
@@ -1084,6 +1082,7 @@ https:///restconf/data/Cisco-IOS-XE-native:native/interface/Loopback
 
 HomeWork for the Hardest Day in CCNA: 
 CSr, linuxdocker, pythondocker, Postman: RestApi.
+
 
 
 
