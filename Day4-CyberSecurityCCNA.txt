@@ -112,7 +112,7 @@ end
 Goberno: allow all Porn, for freedom of expression!
 config t
 Int gi 1
- NO ip access-group 69 in
+ NO ip access-group 25 in
 end
 
 Task1.2: block admu.edu.ph, dlsu.edu.ph, ccp.edu.ph, ue.edu.ph
@@ -125,11 +125,11 @@ ping  www.yourschool.edu.ph = _________
 config t
 NO ip access-list standard NOISKUL
 ip access-list standard NOISKUL
-DENY   __.__.__.__   0.0.255.255
-DENY   __.__.__.__   0.0.255.255
-DENY   __.__.__.__   0.0.255.255
-DENY   __.__.__.__   0.0.255.255
-DENY   __.__.__.__   0.0.255.255
+DENY   172.66.0.0   0.255.255.255
+DENY   50.6.0.0    0.0.255.255
+DENY   184.168.0.0  0.0.255.255
+DENY   155.137.0.0     0.0.255.255
+DENY   103.11.0.0  0.0.255.255
 Permit Any
 Int Gi 1
  ip access-group NOISKUL in
@@ -1084,6 +1084,7 @@ https:///restconf/data/Cisco-IOS-XE-native:native/interface/Loopback
 
 HomeWork for the Hardest Day in CCNA: 
 CSr, linuxdocker, pythondocker, Postman: RestApi.
+
 
 
 
